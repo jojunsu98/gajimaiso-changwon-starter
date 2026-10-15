@@ -1,0 +1,274 @@
+{
+  "project": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon",
+  "python": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\.venv\\Scripts\\python.exe",
+  "session_started_utc": "2026-10-15T09:25:55.3409006Z",
+  "source_before": [
+    {
+      "path": "data\\raw\\migration_raw.csv",
+      "sha256": "8FD4D73B3C5FE2ADC3DE3E308934065AE46788EBDE62054B9B3A7986E696A674",
+      "bytes": 75914,
+      "last_write_time_utc": "2026-10-14T23:53:32.0000000Z"
+    },
+    {
+      "path": "data\\raw\\kosis_metadata.txt",
+      "sha256": "D156761D863D85E263C5C3435550C2394763816566F52DD2311EBFEB1920F491",
+      "bytes": 2803,
+      "last_write_time_utc": "2026-10-14T23:53:32.0000000Z"
+    },
+    {
+      "path": "analysis.py",
+      "sha256": "804C0D39262CCF61E1CD59F0900465E235AB449899F7161F5612774AF729968E",
+      "bytes": 11276,
+      "last_write_time_utc": "2026-10-14T23:56:16.0000000Z"
+    },
+    {
+      "path": "prepare_data.py",
+      "sha256": "61B0D1816A63E3EC2A6A2FC6F2803C7230AD503C5EB9D79AA466063B8259BBAF",
+      "bytes": 7371,
+      "last_write_time_utc": "2026-10-14T23:53:32.0000000Z"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "EFB6203FD3DF46EDFB1DA8941D40A91CBAF5A1B1B18D09FEE73537A6A6635867",
+      "bytes": 109,
+      "last_write_time_utc": "2026-10-14T23:53:32.0000000Z"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1015490978CA050281652FC36B1342AA45CBFBB5383BE59FC6F7210D7A8EE3CF",
+      "bytes": 9129,
+      "last_write_time_utc": "2026-10-14T23:56:16.0000000Z"
+    }
+  ],
+  "output_before": [
+    {
+      "path": "images\\01_external_trend.png",
+      "existed": false
+    },
+    {
+      "path": "images\\02_net_migration.png",
+      "existed": false
+    },
+    {
+      "path": "images\\03_monthly_pattern.png",
+      "existed": false
+    },
+    {
+      "path": "results\\monthly_metrics.csv",
+      "existed": false
+    },
+    {
+      "path": "results\\monthly_pattern.csv",
+      "existed": false
+    },
+    {
+      "path": "results\\validation.json",
+      "existed": false
+    }
+  ],
+  "install_exit_code": 0,
+  "analysis_started_utc": "2026-10-15T09:26:26.1437021Z",
+  "analysis_finished_utc": "2026-10-15T09:26:32.9093523Z",
+  "analysis_exit_code": 0,
+  "independent_verification": {
+    "status": "PASS",
+    "verified_at_utc": "2026-10-15T09:28:31.979943+00:00",
+    "python_executable": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\.venv\\Scripts\\python.exe",
+    "virtual_environment_confirmed": true,
+    "preserved_sources_and_code": [
+      {
+        "path": "data\\raw\\migration_raw.csv",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      },
+      {
+        "path": "data\\raw\\kosis_metadata.txt",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      },
+      {
+        "path": "analysis.py",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      },
+      {
+        "path": "prepare_data.py",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      },
+      {
+        "path": "requirements.txt",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      },
+      {
+        "path": "README.md",
+        "sha256_unchanged": true,
+        "size_unchanged": true,
+        "mtime_unchanged": true
+      }
+    ],
+    "source_encoding": "utf-8-sig",
+    "raw_region_audit": [
+      {
+        "region": "48 경상남도",
+        "data_cells": 1024,
+        "missing_or_nonnumeric_cells": 0,
+        "missing_or_nonnumeric_tokens": {},
+        "used_in_analysis": false
+      },
+      {
+        "region": "48110 창원시",
+        "data_cells": 1024,
+        "missing_or_nonnumeric_cells": 0,
+        "missing_or_nonnumeric_tokens": {},
+        "used_in_analysis": false
+      },
+      {
+        "region": "48120 창원시",
+        "data_cells": 1024,
+        "missing_or_nonnumeric_cells": 0,
+        "missing_or_nonnumeric_tokens": {},
+        "used_in_analysis": true
+      },
+      {
+        "region": "48160 마산시",
+        "data_cells": 1024,
+        "missing_or_nonnumeric_cells": 0,
+        "missing_or_nonnumeric_tokens": {},
+        "used_in_analysis": false
+      },
+      {
+        "region": "48190 진해시",
+        "data_cells": 1024,
+        "missing_or_nonnumeric_cells": 0,
+        "missing_or_nonnumeric_tokens": {},
+        "used_in_analysis": false
+      }
+    ],
+    "duplicate_region_codes": 0,
+    "duplicate_month_item_pairs": 0,
+    "selected_numeric_cells": 1024,
+    "region_code": "48120",
+    "region_name": "창원시",
+    "period": {
+      "first": "2016-01",
+      "last": "2026-08",
+      "months": 128,
+      "exact_expected_months_match": true
+    },
+    "all_128_monthly_identities_passed": true,
+    "internal_moves_excluded_in_both_external_series": true,
+    "raw_clean_metrics_values_match": true,
+    "ma12_initial_blank_counts": {
+      "external_inflow_ma12": 11,
+      "external_outflow_ma12": 11,
+      "net_migration_ma12": 11
+    },
+    "all_remaining_ma12_values_recomputed": true,
+    "monthly_pattern_complete_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "monthly_pattern_rows": 12,
+    "years_per_calendar_month": 10,
+    "all_monthly_pattern_values_recomputed": true,
+    "all_six_required_artifacts_verified": true,
+    "artifacts": [
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\01_external_trend.png",
+        "bytes": 205856,
+        "last_write_time_utc": "2026-10-15T09:26:32.536985+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "bb95ec7c326b628498556fb32285b4fb5efdc35c6ba6c99f30abe5a4c836a313",
+        "dimensions": [
+          1920,
+          1008
+        ]
+      },
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\02_net_migration.png",
+        "bytes": 58938,
+        "last_write_time_utc": "2026-10-15T09:26:32.706244+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "b47bb764655882a973b4f3ff6b16c451fbe34909320a8b1d1adf5ec1dac17d18",
+        "dimensions": [
+          1920,
+          1008
+        ]
+      },
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\03_monthly_pattern.png",
+        "bytes": 106010,
+        "last_write_time_utc": "2026-10-15T09:26:32.825280+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "3c5705c8f62932730c0460a8883beb26ead63e5cf7895ad3d132562a271e3558",
+        "dimensions": [
+          1920,
+          1008
+        ]
+      },
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_metrics.csv",
+        "bytes": 14976,
+        "last_write_time_utc": "2026-10-15T09:26:32.827817+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "4b6e224404a1b6fffe196e308b77a5aa5b13b807d6ae012fe31cf8c33b36bb5f",
+        "data_rows": 128
+      },
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_pattern.csv",
+        "bytes": 412,
+        "last_write_time_utc": "2026-10-15T09:26:32.828780+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "2bfe8d572322256a6a49f62ab9334ac594142f55e0143c5f86587f920028b071",
+        "data_rows": 12
+      },
+      {
+        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\validation.json",
+        "bytes": 2338,
+        "last_write_time_utc": "2026-10-15T09:26:32.829777+00:00",
+        "created_or_updated_in_this_run": true,
+        "readable": true,
+        "existed_before_run": false,
+        "sha256": "5a30fb399e5d1fb4b1d07c5d1d3c762c8492a109aff04d5c371eacfd74af40b3"
+      }
+    ],
+    "visual_review": {
+      "status": "PASS",
+      "method": "All three original PNG files opened using view_image and visually inspected",
+      "korean_text": "readable; no missing glyphs observed",
+      "axes": "titles, dates or months, units, ticks and negative values readable",
+      "legends": "01 four series and 03 two series readable; 02 single series identified by title and axis, no separate legend",
+      "clipping": "no clipped titles, axes, legends or notes observed"
+    },
+    "scope_limits": [
+      "Uploaded local snapshot only; live KOSIS correspondence not independently verified",
+      "Outlier and causal assessment not performed; no youth, foreigner or service-effect conclusions",
+      "No report, dashboard, deployment or GitHub upload performed"
+    ]
+  }
+}
