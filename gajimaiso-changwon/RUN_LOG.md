@@ -1,9 +1,11 @@
+> 공개용 경로 표시: 제출 검수에서 로컬 절대경로를 <PROJECT_ROOT>, <REPO_ROOT>, <VENV_ROOT>, <SYSTEM_PYTHON>으로 치환했다. 명령·종료 코드·수치·기존 해시는 당시 실행 기록이며, 파일 크기/해시는 경로 치환 전 기록이다. 과거 기록을 새 실행 결과로 해석하지 않는다.
+
 # 가지마이소창원 로컬 실행 기록
 
 - 작업일: 2026-10-15 (Asia/Seoul)
-- 작업 범위: `C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter`
-- 실제 프로젝트: `C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon`
-- 재사용 Python: `C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe`
+- 작업 범위: `<REPO_ROOT>`
+- 실제 프로젝트: `<PROJECT_ROOT>`
+- 재사용 Python: `<VENV_ROOT>\Scripts\python.exe`
 - 원자료와 메타자료를 보존하며, 기존 분석 코드로 실행한다. 전역 패키지 설치, 시스템 Python/보안 설정 변경, REPORT.md 작성, 대시보드, 배포, GitHub 업로드는 작업 범위에 포함하지 않는다.
 
 ## 1. 위치 및 환경 확인
@@ -20,7 +22,7 @@ rg --files --hidden -g '!.venv/**' -g '!**/.venv/**' -g '!.git/**' -g '!**/.git/
 다음 명령으로 실행 구조와 기존 가상환경을 확인했다.
 
 ```powershell
-$root = 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter'
+$root = '<REPO_ROOT>'
 $project = Join-Path $root 'gajimaiso-changwon'
 $files = @('README.md','analysis.py','prepare_data.py','requirements.txt')
 foreach ($name in $files) { [pscustomobject]@{File=$name;Content=(Get-Content -LiteralPath (Join-Path $project $name) -Raw)} | ConvertTo-Json -Compress }
@@ -42,38 +44,38 @@ if (Test-Path -LiteralPath $venvPython) { & $venvPython -c 'import sys; print(sy
 
 
 실행 시작 (UTC): 2026-10-15T09:25:55.3409006Z
-작업 디렉터리: C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon
+작업 디렉터리: <PROJECT_ROOT>
 현재 프로세스에서 PYTHONUTF8=1, PYTHONIOENCODING=utf-8, MPLCONFIGDIR=results/.matplotlib-cache를 설정했다. 시스템 설정은 바꾸지 않았다. pip 캐시는 --no-cache-dir로 사용하지 않았다.
 
 실행 전 해시/크기/수정 시각 및 결과 존재 상태: results/run_verification.json에 기록.
 
 ### 의존성 설치
 ```powershell
-& 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe' -m pip --disable-pip-version-check install --no-cache-dir -r 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt'
+& '<VENV_ROOT>\Scripts\python.exe' -m pip --disable-pip-version-check install --no-cache-dir -r '<PROJECT_ROOT>\requirements.txt'
 ```
 종료 코드: 0
 ```text
-Collecting matplotlib==3.10.8 (from -r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting matplotlib==3.10.8 (from -r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading matplotlib-3.10.8-cp312-cp312-win_amd64.whl.metadata (52 kB)
-Collecting contourpy>=1.0.1 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting contourpy>=1.0.1 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading contourpy-1.4.0-cp312-cp312-win_amd64.whl.metadata (3.8 kB)
-Collecting cycler>=0.10 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting cycler>=0.10 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
-Collecting fonttools>=4.22.0 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting fonttools>=4.22.0 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading fonttools-4.67.0-cp312-cp312-win_amd64.whl.metadata (139 kB)
-Collecting kiwisolver>=1.3.1 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading kiwisolver-1.5.1-cp312-cp312-win_amd64.whl.metadata (5.2 kB)
-Collecting numpy>=1.23 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting numpy>=1.23 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading numpy-2.5.4-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
-Collecting packaging>=20.0 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting packaging>=20.0 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
-Collecting pillow>=8 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting pillow>=8 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading pillow-12.3.0-cp312-cp312-win_amd64.whl.metadata (9.3 kB)
-Collecting pyparsing>=3 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting pyparsing>=3 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
-Collecting python-dateutil>=2.7 (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting python-dateutil>=2.7 (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
-Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3))
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3))
   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
 Downloading matplotlib-3.10.8-cp312-cp312-win_amd64.whl (8.1 MB)
    ---------------------------------------- 8.1/8.1 MB 15.3 MB/s eta 0:00:00
@@ -96,7 +98,7 @@ Successfully installed contourpy-1.4.0 cycler-0.12.1 fonttools-4.67.0 kiwisolver
 ### 분석 실행
 시작 (UTC): 2026-10-15T09:26:26.1437021Z
 ```powershell
-& 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe' 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\analysis.py'
+& '<VENV_ROOT>\Scripts\python.exe' '<PROJECT_ROOT>\analysis.py'
 ```
 종료 코드: 0
 종료 (UTC): 2026-10-15T09:26:32.9093523Z
@@ -108,7 +110,7 @@ Successfully installed contourpy-1.4.0 cycler-0.12.1 fonttools-4.67.0 kiwisolver
 [NEXT] Review charts and evidence before writing REPORT.md
 ```
 ### 설치된 가상환경 패키지
-명령: & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe' -m pip list --format=json --disable-pip-version-check
+명령: & '<VENV_ROOT>\Scripts\python.exe' -m pip list --format=json --disable-pip-version-check
 ```json
 [{"name": "contourpy", "version": "1.4.0"}, {"name": "cycler", "version": "0.12.1"}, {"name": "fonttools", "version": "4.67.0"}, {"name": "kiwisolver", "version": "1.5.1"}, {"name": "matplotlib", "version": "3.10.8"}, {"name": "numpy", "version": "2.5.4"}, {"name": "packaging", "version": "26.3"}, {"name": "pillow", "version": "12.3.0"}, {"name": "pip", "version": "25.0.1"}, {"name": "pyparsing", "version": "3.3.3"}, {"name": "python-dateutil", "version": "2.9.0.post0"}, {"name": "six", "version": "1.17.0"}]
 ```
@@ -323,14 +325,14 @@ state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding=
 print(json.dumps(state["independent_verification"], ensure_ascii=False, indent=2))
 
 '@
-$verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe' -
+$verificationCode | & '<VENV_ROOT>\Scripts\python.exe' -
 ```
 검증 종료 코드: 0
 ```json
 {
   "status": "PASS",
   "verified_at_utc": "2026-10-15T09:28:31.979943+00:00",
-  "python_executable": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\.venv\\Scripts\\python.exe",
+  "python_executable": "<VENV_ROOT>\\Scripts\\python.exe",
   "virtual_environment_confirmed": true,
   "preserved_sources_and_code": [
     {
@@ -446,7 +448,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
   "all_six_required_artifacts_verified": true,
   "artifacts": [
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\01_external_trend.png",
+      "path": "<PROJECT_ROOT>\\images\\01_external_trend.png",
       "bytes": 205856,
       "last_write_time_utc": "2026-10-15T09:26:32.536985+00:00",
       "created_or_updated_in_this_run": true,
@@ -459,7 +461,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
       ]
     },
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\02_net_migration.png",
+      "path": "<PROJECT_ROOT>\\images\\02_net_migration.png",
       "bytes": 58938,
       "last_write_time_utc": "2026-10-15T09:26:32.706244+00:00",
       "created_or_updated_in_this_run": true,
@@ -472,7 +474,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
       ]
     },
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\03_monthly_pattern.png",
+      "path": "<PROJECT_ROOT>\\images\\03_monthly_pattern.png",
       "bytes": 106010,
       "last_write_time_utc": "2026-10-15T09:26:32.825280+00:00",
       "created_or_updated_in_this_run": true,
@@ -485,7 +487,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
       ]
     },
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_metrics.csv",
+      "path": "<PROJECT_ROOT>\\results\\monthly_metrics.csv",
       "bytes": 14976,
       "last_write_time_utc": "2026-10-15T09:26:32.827817+00:00",
       "created_or_updated_in_this_run": true,
@@ -495,7 +497,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
       "data_rows": 128
     },
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_pattern.csv",
+      "path": "<PROJECT_ROOT>\\results\\monthly_pattern.csv",
       "bytes": 412,
       "last_write_time_utc": "2026-10-15T09:26:32.828780+00:00",
       "created_or_updated_in_this_run": true,
@@ -505,7 +507,7 @@ $verificationCode | & 'C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-s
       "data_rows": 12
     },
     {
-      "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\validation.json",
+      "path": "<PROJECT_ROOT>\\results\\validation.json",
       "bytes": 2338,
       "last_write_time_utc": "2026-10-15T09:26:32.829777+00:00",
       "created_or_updated_in_this_run": true,
@@ -647,8 +649,8 @@ print(json.dumps(summary,ensure_ascii=False,indent=2))
 실행: 아래 명시한 가상환경 python.exe - 로 표준입력 전달. 현재 폴더: 실제 프로젝트.
 
 ## 실제 재실행 2026-10-16T00:04:52.952271+09:00
-폴더: C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon
-Python: C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe
+폴더: <PROJECT_ROOT>
+Python: <VENV_ROOT>\Scripts\python.exe
 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
 사전 확인: rg --files --hidden (모든 .venv/.git/__pycache__ 제외), Get-Content -LiteralPath로 README.md/analysis.py/prepare_data.py/requirements.txt 읽기, 기존 Python --version 및 -m pip --version. 종료 코드 0; Python 3.12.10, pip 25.0.1. 기존 결과가 이미 존재함을 확인. 일반 실행기의 helper_unknown_error 초기화 실패 후 정상 승인 실행. 시스템/보안 설정 변경 없음.
 보존 대상 실행 전 SHA256/mtime_ns:
@@ -682,22 +684,185 @@ Python: C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Sc
     1792076362354164100
   ]
 }
-명령: "C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe" -m pip --disable-pip-version-check install --no-cache-dir -r "C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt"
+명령: "<VENV_ROOT>\Scripts\python.exe" -m pip --disable-pip-version-check install --no-cache-dir -r "<PROJECT_ROOT>\requirements.txt"
 종료 코드: 0
-Requirement already satisfied: matplotlib==3.10.8 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from -r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (3.10.8)
-Requirement already satisfied: contourpy>=1.0.1 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (1.4.0)
-Requirement already satisfied: cycler>=0.10 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (0.12.1)
-Requirement already satisfied: fonttools>=4.22.0 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (4.67.0)
-Requirement already satisfied: kiwisolver>=1.3.1 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (1.5.1)
-Requirement already satisfied: numpy>=1.23 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (2.5.4)
-Requirement already satisfied: packaging>=20.0 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (26.3)
-Requirement already satisfied: pillow>=8 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (12.3.0)
-Requirement already satisfied: pyparsing>=3 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (3.3.3)
-Requirement already satisfied: python-dateutil>=2.7 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (2.9.0.post0)
-Requirement already satisfied: six>=1.5 in c:\users\user\onedrive\바탕 화면\gajimaiso-changwon-starter\.venv\lib\site-packages (from python-dateutil>=2.7->matplotlib==3.10.8->-r C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\requirements.txt (line 3)) (1.17.0)
+Requirement already satisfied: matplotlib==3.10.8 in <VENV_ROOT>\lib\site-packages (from -r <PROJECT_ROOT>\requirements.txt (line 3)) (3.10.8)
+Requirement already satisfied: contourpy>=1.0.1 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (4.67.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (1.5.1)
+Requirement already satisfied: numpy>=1.23 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (2.5.4)
+Requirement already satisfied: packaging>=20.0 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (26.3)
+Requirement already satisfied: pillow>=8 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (3.3.3)
+Requirement already satisfied: python-dateutil>=2.7 in <VENV_ROOT>\lib\site-packages (from matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in <VENV_ROOT>\lib\site-packages (from python-dateutil>=2.7->matplotlib==3.10.8->-r <PROJECT_ROOT>\requirements.txt (line 3)) (1.17.0)
 
-명령: "C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\.venv\Scripts\python.exe" "C:\Users\user\OneDrive\바탕 화면\gajimaiso-changwon-starter\gajimaiso-changwon\analysis.py"
+명령: "<VENV_ROOT>\Scripts\python.exe" "<PROJECT_ROOT>\analysis.py"
 종료 코드: 1
-[ERROR] [Errno 22] Invalid argument: 'C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\01_external_trend.png'
+[ERROR] [Errno 22] Invalid argument: '<PROJECT_ROOT>\\images\\01_external_trend.png'
 
 이번 설치·분석·독립검증 스크립트 종료 코드: 1
+저장 오류 진단: Get-Item으로 PNG 속성·크기·수정 시각 확인. 기존 PNG 3개를 Python Path.open(r+b)로 열어 8바이트 헤더만 읽는 검사 모두 PASS. 내용 변경 없음. 정확한 OS 오류 원인은 아직 미확정. 파일 읽기 후 기존 코드 재시도.
+
+## 실제 재실행 2026-10-16T00:05:45.948783+09:00
+폴더: <PROJECT_ROOT>
+Python: <VENV_ROOT>\Scripts\python.exe
+3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+사전 확인: rg --files --hidden (모든 .venv/.git/__pycache__ 제외), Get-Content -LiteralPath로 README.md/analysis.py/prepare_data.py/requirements.txt 읽기, 기존 Python --version 및 -m pip --version. 종료 코드 0; Python 3.12.10, pip 25.0.1. 기존 결과가 이미 존재함을 확인. 일반 실행기의 helper_unknown_error 초기화 실패 후 정상 승인 실행. 시스템/보안 설정 변경 없음.
+보존 대상 실행 전 SHA256/mtime_ns:
+{
+  "data/raw/migration_raw.csv": [
+    "8fd4d73b3c5fe2adc3de3e308934065ae46788ebde62054b9b3a7986e696a674",
+    1792022012000000000
+  ],
+  "data/raw/kosis_metadata.txt": [
+    "d156761d863d85e263c5c3435550c2394763816566f52dd2311ebfeb1920f491",
+    1792022012000000000
+  ],
+  "analysis.py": [
+    "804c0d39262ccf61e1cd59f0900465e235ab449899f7161f5612774af729968e",
+    1792022176000000000
+  ],
+  "prepare_data.py": [
+    "61b0d1816a63e3ec2a6a2fc6f2803c7230ad503c5eb9d79aa466063b8259bbaf",
+    1792022012000000000
+  ],
+  "requirements.txt": [
+    "efb6203fd3df46edfb1da8941d40a91cbaf5a1b1b18d09fee73537a6a6635867",
+    1792022012000000000
+  ],
+  "README.md": [
+    "1015490978ca050281652fc36b1342aa45cbfbb5383be59fc6f7210d7a8ee3cf",
+    1792022176000000000
+  ],
+  "REPORT.md": [
+    "33b6c41cb9f51ba2fe5295f2b3fbb8a0a55772620285ef7ce2f1ee2de953cb96",
+    1792076362354164100
+  ]
+}
+requirements 설치 명령은 이번 작업의 직전 시도에서 종료 코드 0으로 완료됨. 중복 설치 생략.
+명령: "<VENV_ROOT>\Scripts\python.exe" "<PROJECT_ROOT>\analysis.py"
+종료 코드: 0
+[PASS] 48120 Changwon | 2016-01 ~ 2026-08 | 128 months
+[PASS] Raw data preserved; region, missing months, duplicates and identities checked
+[PASS] 3 charts saved to images/
+[PASS] Metrics and validation saved to results/
+[NEXT] Review charts and evidence before writing REPORT.md
+
+이번 독립 검증 결과:
+{
+  "status": "PASS",
+  "install_exit": 0,
+  "analysis_exit": 0,
+  "analysis_started_utc": "2026-10-15T15:05:45.952101+00:00",
+  "analysis_finished_utc": "2026-10-15T15:05:48.127394+00:00",
+  "region": "48120 창원시",
+  "period": "2016-01~2026-08",
+  "months": 128,
+  "raw_audit": [
+    {
+      "region": "48 경상남도",
+      "missing_or_nonnumeric": 0
+    },
+    {
+      "region": "48110 창원시",
+      "missing_or_nonnumeric": 0
+    },
+    {
+      "region": "48120 창원시",
+      "missing_or_nonnumeric": 0
+    },
+    {
+      "region": "48160 마산시",
+      "missing_or_nonnumeric": 0
+    },
+    {
+      "region": "48190 진해시",
+      "missing_or_nonnumeric": 0
+    }
+  ],
+  "duplicates": 0,
+  "identities_and_internal_exclusion": true,
+  "ma12_initial_blanks": 11,
+  "ma12_and_pattern_recomputed": true,
+  "pattern_years": "2016~2025",
+  "protected_files_unchanged": [
+    "data/raw/migration_raw.csv",
+    "data/raw/kosis_metadata.txt",
+    "analysis.py",
+    "prepare_data.py",
+    "requirements.txt",
+    "README.md",
+    "REPORT.md"
+  ],
+  "artifacts": [
+    {
+      "path": "<PROJECT_ROOT>\\images\\01_external_trend.png",
+      "bytes": 205856,
+      "mtime_utc": "2026-10-15T15:05:47.483972+00:00",
+      "readable": true,
+      "updated_this_run": true
+    },
+    {
+      "path": "<PROJECT_ROOT>\\images\\02_net_migration.png",
+      "bytes": 58938,
+      "mtime_utc": "2026-10-15T15:05:47.781687+00:00",
+      "readable": true,
+      "updated_this_run": true
+    },
+    {
+      "path": "<PROJECT_ROOT>\\images\\03_monthly_pattern.png",
+      "bytes": 106010,
+      "mtime_utc": "2026-10-15T15:05:47.986932+00:00",
+      "readable": true,
+      "updated_this_run": true
+    },
+    {
+      "path": "<PROJECT_ROOT>\\results\\monthly_metrics.csv",
+      "bytes": 14976,
+      "mtime_utc": "2026-10-15T15:05:47.990942+00:00",
+      "readable": true,
+      "updated_this_run": true
+    },
+    {
+      "path": "<PROJECT_ROOT>\\results\\monthly_pattern.csv",
+      "bytes": 412,
+      "mtime_utc": "2026-10-15T15:05:47.990942+00:00",
+      "readable": true,
+      "updated_this_run": true
+    },
+    {
+      "path": "<PROJECT_ROOT>\\results\\validation.json",
+      "bytes": 2338,
+      "mtime_utc": "2026-10-15T15:05:47.992948+00:00",
+      "readable": true,
+      "updated_this_run": true
+    }
+  ],
+  "visual_review": "pending"
+}
+재시도 스크립트 종료 코드: 0
+### 이번 재실행 최종 확인
+
+- 분석 재시도 및 독립 검증 종료 코드 0. 설치는 첫 시도에서 종료 코드 0.
+- 갱신된 PNG 3개를 view_image(original)로 각각 직접 열어 확인: 한글·축·눈금·음수 표시 정상, 01/03 범례 정상, 제목·주석 잘림 없음. 02는 단일 계열로 별도 범례가 없는 기존 구성. 위 visual_review=pending은 이 확인으로 완료됨.
+- 첫 저장 시도에서 Errno 22 Invalid argument 발생. PNG 3개를 내용 변경 없이 읽기·쓰기 모드로 열 수 있음을 확인한 뒤 기존 코드를 재실행하자 성공. 정확한 Windows 오류 원인은 미확정이며 OneDrive 원인으로 단정하지 않음.
+- 코드 수정 없음. 원자료 CSV·메타자료·REPORT.md 해시와 수정 시각 보존. 정제본·PNG 3개·CSV 2개·validation.json 갱신, RUN_LOG.md에 실제 명령·실패·재시도·결과 추가.
+- 실행 전 JS 도구 호출 1회가 SyntaxError로 거부되어 해당 호출의 셸/분석은 실행되지 않음. 이후 도구 호출 구문을 수정해 실행함.
+- 2026년 부분 연도는 월별 평균에서 제외. 이동평균 최초 11개월 빈칸은 원자료 결측이 아님. 실시간 자료 대조·원인/서비스효과 분석·보고서 수정·배포·GitHub 업로드는 수행하지 않음.
+
+## 제출 전 최종 검수
+
+- 기능 추가·새 분석·그래프 재생성 없이 기존 자료와 코드·문서를 점검했다.
+- 저장소 루트 .venv의 추적 파일 4,240개와 Matplotlib 캐시 1개를 git rm --cached로 인덱스에서 제거했다. 로컬 환경과 캐시 파일은 보존했다. 과거 커밋의 파일은 이 조치로 삭제되지 않는다.
+- 루트 .gitignore를 추가하고 하위 .gitignore를 보완했다. .venv, __pycache__, .env, 임시파일, 글꼴 캐시에 대해 git check-ignore 7개 사례가 통과했다.
+- 루트 README에 하위 프로젝트 안내와 가상환경 재사용 실행 명령을 추가했다. 하위 README의 미실행·보고서 미작성 문구를 실제 완료 상태에 맞게 갱신했다.
+- 공개용 로그와 검증 JSON의 로컬 경로를 치환했다. 원자료·Python 분석 코드·수치 CSV·PNG는 변경하지 않았다.
+- Python 코드를 메모리에서 구문 검사하고 원자료 구조(머리글 2행과 지역 5행, 1,025열), 선택 지역 48120 및 결과 128개월을 대조했다. 순이동·내부 이동 제외·이동평균·월별 평균을 기존 CSV와 재검산해 통과했다.
+- analysis.py/prepare_data.py의 직접 외부 의존성은 matplotlib이며 requirements.txt의 matplotlib==3.10.8과 일치한다. 가상환경 python -m pip check 결과: No broken requirements found.
+- REPORT.md의 질문 3개, 후행 12개월 평균과 완결 연도 달별 평균의 2가지 방법, 그래프 3개, 인사이트 3개, Fact/Interpretation/Action 구분, 결론·한계·AI 로그를 확인했다. 수치 표·극값·이미지 상대경로 3개와 모든 로컬 자료 링크가 일치했다. 달별 평균은 엄밀한 계절성 분해가 아니다.
+- 현재 제출 트리의 키/토큰/비밀키/이메일/휴대전화/로컬 사용자 경로 패턴 검사에서 후보가 없었다. 메타자료의 공공기관 문의 전화는 원본 그대로 보존했다. 자동 패턴 검사가 모든 민감정보 부재를 절대 보증하지는 않는다.
+- 과거 첫 커밋에는 GitHub 비공개 주소가 아닌 작성자 이메일이 남아 있어 공개 유지 여부를 사용자에게 확인 중이다. 과거 이력 재작성 또는 강제 push는 수행하지 않았다.
+- 최종 staged diff 검증 PASS: 삭제 4,241개는 .venv 및 글꼴 캐시뿐이며, 수정·추가 8개 파일만 포함됐다. 원자료·분석 코드·수치 CSV·PNG는 기존 커밋과 동일하다. git diff --cached --check 통과.
+- 이미 공개된 과거 이력은 유지하고 새 커밋에는 GitHub 비공개용 작성자 주소를 사용한다. 과거 이메일 삭제 여부는 별도 확인 사항이며 강제 push 또는 이력 재작성은 하지 않는다.

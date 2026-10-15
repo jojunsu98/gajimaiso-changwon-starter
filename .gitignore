@@ -1,0 +1,22 @@
+# Local environments, Python caches and editor files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.matplotlib-cache/
+.vscode/
+.idea/
+
+# Local secrets and temporary files
+.env
+.env.*
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+~$*
+.DS_Store
+Thumbs.db

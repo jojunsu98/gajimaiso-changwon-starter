@@ -4,3 +4,12 @@ __pycache__/
 .env
 .env.*
 .vscode/
+.matplotlib-cache/
+.pytest_cache/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+~$*

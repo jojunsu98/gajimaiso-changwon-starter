@@ -1,6 +1,6 @@
 {
-  "project": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon",
-  "python": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\.venv\\Scripts\\python.exe",
+  "project": "<PROJECT_ROOT>",
+  "python": "<VENV_ROOT>\\Scripts\\python.exe",
   "session_started_utc": "2026-10-15T09:25:55.3409006Z",
   "source_before": [
     {
@@ -73,7 +73,7 @@
   "independent_verification": {
     "status": "PASS",
     "verified_at_utc": "2026-10-15T09:28:31.979943+00:00",
-    "python_executable": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\.venv\\Scripts\\python.exe",
+    "python_executable": "<VENV_ROOT>\\Scripts\\python.exe",
     "virtual_environment_confirmed": true,
     "preserved_sources_and_code": [
       {
@@ -189,7 +189,7 @@
     "all_six_required_artifacts_verified": true,
     "artifacts": [
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\01_external_trend.png",
+        "path": "<PROJECT_ROOT>\\images\\01_external_trend.png",
         "bytes": 205856,
         "last_write_time_utc": "2026-10-15T09:26:32.536985+00:00",
         "created_or_updated_in_this_run": true,
@@ -202,7 +202,7 @@
         ]
       },
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\02_net_migration.png",
+        "path": "<PROJECT_ROOT>\\images\\02_net_migration.png",
         "bytes": 58938,
         "last_write_time_utc": "2026-10-15T09:26:32.706244+00:00",
         "created_or_updated_in_this_run": true,
@@ -215,7 +215,7 @@
         ]
       },
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\images\\03_monthly_pattern.png",
+        "path": "<PROJECT_ROOT>\\images\\03_monthly_pattern.png",
         "bytes": 106010,
         "last_write_time_utc": "2026-10-15T09:26:32.825280+00:00",
         "created_or_updated_in_this_run": true,
@@ -228,7 +228,7 @@
         ]
       },
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_metrics.csv",
+        "path": "<PROJECT_ROOT>\\results\\monthly_metrics.csv",
         "bytes": 14976,
         "last_write_time_utc": "2026-10-15T09:26:32.827817+00:00",
         "created_or_updated_in_this_run": true,
@@ -238,7 +238,7 @@
         "data_rows": 128
       },
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\monthly_pattern.csv",
+        "path": "<PROJECT_ROOT>\\results\\monthly_pattern.csv",
         "bytes": 412,
         "last_write_time_utc": "2026-10-15T09:26:32.828780+00:00",
         "created_or_updated_in_this_run": true,
@@ -248,7 +248,7 @@
         "data_rows": 12
       },
       {
-        "path": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\results\\validation.json",
+        "path": "<PROJECT_ROOT>\\results\\validation.json",
         "bytes": 2338,
         "last_write_time_utc": "2026-10-15T09:26:32.829777+00:00",
         "created_or_updated_in_this_run": true,

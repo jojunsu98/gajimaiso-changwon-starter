@@ -21,7 +21,7 @@
   "imputation_applied": false,
   "outlier_deletion_applied": false,
   "outlier_assessment": "not_performed; no deletion or imputation",
-  "output": "C:\\Users\\user\\OneDrive\\바탕 화면\\gajimaiso-changwon-starter\\gajimaiso-changwon\\data\\changwon_migration_monthly_clean.csv",
+  "output": "<PROJECT_ROOT>\\data\\changwon_migration_monthly_clean.csv",
   "output_rows": 128,
   "output_columns": 13,
   "first_row": {
