@@ -6,6 +6,15 @@
 - [데이터·분석 방법과 상세 실행 안내](gajimaiso-changwon/README.md)
 - [실행·검증 기록](gajimaiso-changwon/RUN_LOG.md)
 
+## 제출 링크 및 공개·배포 검증
+
+- 공개 저장소: [https://github.com/jojunsu98/gajimaiso-changwon-starter](https://github.com/jojunsu98/gajimaiso-changwon-starter) (`main`, `public`)
+- GitHub Pages: [https://jojunsu98.github.io/gajimaiso-changwon-starter/](https://jojunsu98.github.io/gajimaiso-changwon-starter/)
+- 2026-10-16 (KST) 확인: GitHub API에서 `visibility=public`, `private=false`. [분석 코드](gajimaiso-changwon/analysis.py), [보고서](gajimaiso-changwon/REPORT.md), [데이터 출처](gajimaiso-changwon/data/raw/kosis_metadata.txt)가 공개 저장소에 포함되어 있습니다.
+- 이 문구 보완 직전 확인한 `main` 최신 커밋과 Pages 배포 커밋: [`612f466`](https://github.com/jojunsu98/gajimaiso-changwon-starter/commit/612f466e263315278cc40ae4a2a4aae77f7479e8). 이후 커밋은 [main 커밋 기록](https://github.com/jojunsu98/gajimaiso-changwon-starter/commits/main/)에서 확인할 수 있습니다.
+- Pages 배포: [실행 38863583481](https://github.com/jojunsu98/gajimaiso-changwon-starter/actions/runs/38863583481) `completed / success`, 게시된 페이지 응답 `HTTP 200` 확인.
+- 상세 공개·배포 근거: [run_verification.json의 publication_verification](gajimaiso-changwon/results/run_verification.json). `RUN_LOG.md`의 보고서·배포·업로드 미수행 문구는 과거 로컬 실행 당시의 범위이며, 현재 제출 상태는 이 섹션을 기준으로 확인합니다. 이번 보완에서는 분석을 재실행하지 않았습니다.
+
 ## Windows에서 실행
 
 Python 3.10 이상이 필요합니다. 실제 검증 환경은 Python 3.12.10 / Matplotlib 3.10.8입니다.

@@ -268,7 +268,23 @@
     "scope_limits": [
       "Uploaded local snapshot only; live KOSIS correspondence not independently verified",
       "Outlier and causal assessment not performed; no youth, foreigner or service-effect conclusions",
-      "No report, dashboard, deployment or GitHub upload performed"
+      "No interactive dashboard implemented; report, presentation and public GitHub/Pages publication are confirmed in publication_verification"
     ]
+  },
+  "publication_verification": {
+    "verified_on_kst": "2026-10-16",
+    "repository_url": "https://github.com/jojunsu98/gajimaiso-changwon-starter",
+    "visibility": "public",
+    "private": false,
+    "branch": "main",
+    "verified_head_before_documentation_update": "612f466e263315278cc40ae4a2a4aae77f7479e8",
+    "published_files": ["gajimaiso-changwon/analysis.py", "gajimaiso-changwon/REPORT.md", "gajimaiso-changwon/data/raw/kosis_metadata.txt"],
+    "pages_url": "https://jojunsu98.github.io/gajimaiso-changwon-starter/",
+    "pages_deployed_commit": "612f466e263315278cc40ae4a2a4aae77f7479e8",
+    "pages_workflow_run_url": "https://github.com/jojunsu98/gajimaiso-changwon-starter/actions/runs/38863583481",
+    "pages_workflow_status": "completed",
+    "pages_workflow_conclusion": "success",
+    "pages_http_status": 200,
+    "scope": "Publication evidence checked after the original local analysis run; analysis was not rerun for this documentation update"
   }
 }
