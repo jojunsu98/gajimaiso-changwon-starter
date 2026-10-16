@@ -1,0 +1,52 @@
+name: Deploy presentation to GitHub Pages
+
+# Manual deployment keeps publishing an explicit action.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Package only the presentation assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/images
+          cp gajimaiso-changwon/index.html _site/index.html
+          cp gajimaiso-changwon/styles.css _site/styles.css
+          cp gajimaiso-changwon/script.js _site/script.js
+          cp gajimaiso-changwon/images/01_external_trend.png _site/images/
+          cp gajimaiso-changwon/images/02_net_migration.png _site/images/
+          cp gajimaiso-changwon/images/03_monthly_pattern.png _site/images/
+          test "$(find _site -type f | wc -l)" -eq 6
+          test -z "$(find _site -type l -print)"
+      - name: Upload presentation artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
